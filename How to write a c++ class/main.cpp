@@ -1,41 +1,54 @@
 #include<iostream>
 
-#define LOG(X) std::cout << X << std::endl
-
-//#define struct class//struct replaced by class here
-
-struct Player
+class Log
 {
- //private://to be private i need to write private    
-      int x, y;
-      int speed;
 
-      void Move( int xa, int ya)
-{
-    x += xa * speed;
-    y += ya * speed;
-}
+public :
+
+     const int LogLevelError = 0;
+     const int LogLevelWarning = 1;
+     const int LogLevelInfo = 2;
+                                     //public methods in one section and public variables in other section
+
+
+ private :
+    int m_LogLevel = LogLevelInfo;//to set a LogLevel(it is a class member variable and its private)and everything gets printed
+
+public :
+   void SetLevel(int level)
+   {
+    m_LogLevel = level;//set member variable to a parameter
+   }
+   
+   void Error(const char* message)//strings
+   {
+        if(m_LogLevel >= LogLevelError)
+         std::cout << "[ERROR]" <<  message << std::endl;
+
+   }
+   
+   void Warn(const char* message)//strings
+   {
+       if(m_LogLevel >= LogLevelWarning)
+         std::cout << "[WARNING]" <<  message << std::endl;
+
+   }
+
+   void Info(const char* message)//strings
+   {
+        if(m_LogLevel >= LogLevelInfo)
+         std::cout << "[INFO]" <<  message << std::endl;
+
+   }
 };
-
-
-struct Vec2//math vector class simple functionality
-{
-    float x, y;
-    void Add(const Vec2& other)
-{
-    x += other.x;
-    y += other.y;
-}
-};
-
-
-
 
 int main()
 {
-    Player player;
 
-   player.Move(1, -1);
-    
+    Log log;//instantiate the Log class 
+    log,SetLevel(log.LogLevelWarning);//setting a log level warning suppose SetLevel(2) assign 2 to memeber variable
+    log.Warn("Hello!");
     std::cin.get();
 }
+
+
