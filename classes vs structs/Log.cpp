@@ -1,6 +1,3 @@
-//classes are private and structs are public and in c there are structs
-//we use when it is plain old data or pod;some kind of struct which represent a bunch of variables; example is a mathematical vector class
-//we use class for inheritance not struct
 #include<iostream>
 
 #define LOG(X) std::cout << X << std::endl
@@ -24,14 +21,15 @@ struct Player
 struct Vec2//math vector class simple functionality
 {
     float x, y;
-};
-
-
-void Add(const Vec2& other)
+    void Add(const Vec2& other)
 {
     x += other.x;
     y += other.y;
 }
+};
+
+
+
 
 int main()
 {

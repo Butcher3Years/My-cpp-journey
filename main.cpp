@@ -17,6 +17,8 @@ int main() {
     } else {
         std::cout << "\"" << str << "\" is not a palindrome." << std::endl;
     }
-
     return 0;
 }
+    
+
+    
