@@ -53,10 +53,15 @@ int main()
 {
 
     Log log;//instantiate the Log class 
+
     log.SetLevel(log.LogLevelWarning);//setting a log level warning suppose SetLevel(2) assign 2 to memeber variable[not a nice way to relate to object;we need to relate to class itself by ststic Log::]
     log.Warn("Hello!");
     log.Error("Hello!");
     log.Info("Hello!");
+
+    log.SetLevel(log.LogLevelWarning);//setting a log level warning suppose SetLevel(2) assign 2 to memeber variable
+    log.Warn("Hello!");
+
     std::cin.get();
 }
 
