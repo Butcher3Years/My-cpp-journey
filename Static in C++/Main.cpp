@@ -1,3 +1,8 @@
+//this is using static outside of a class
+//outside of class means internal linkage; visible to only that translational unit!!
+//where as intrenal ststic is shared across all instances in n class(but applicable to only one instance!!)
+
+
 #include<iostream>
 
 extern int s_Variable;//external linkage ;looks for that s variable in another transalational unit
