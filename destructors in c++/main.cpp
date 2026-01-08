@@ -42,7 +42,7 @@ class Entity
  {
      Entity e;
      e.print();
-     e.~Entity();//call the destructor
+     e.~Entity();//call the destructor manually in case  of free functions
  }
 
 
@@ -54,3 +54,5 @@ int main()
     Function();
     std::cin.get();
 }
+
+//if it allocated through out the usage of the entity or in the entity constructor and you are likely to get rid off it in the destructor and when that destructor get called entity is gone
