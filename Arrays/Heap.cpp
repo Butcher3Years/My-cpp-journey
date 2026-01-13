@@ -7,10 +7,10 @@ class Entity
 {
     public :
 
-      static const int exampleSize = 5;//constexpr will explained later
+      static const int exampleSize = 5;//constexpr will explained later which is constant expression
       int* example[exampleSize];//suppose we changed it to a heap we first get the Entity memory adress which leads to the array  its a jumping across the memory so [better to switch it to stack]
 
-    std::array<int, 5> another;
+    std::array<int, 5> another;//type and size
 
       Entity()
       {

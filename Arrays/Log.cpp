@@ -20,4 +20,4 @@ int main()
 }
 
 //arrays are always stored in rows ; each integer of 4 bytes total 20 bytes;
-//array is just a pointer here it is a integer pointer
+//array is just a pointer here it is a int pointer
