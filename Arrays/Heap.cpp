@@ -1,4 +1,4 @@
-//there is no way of knowing the size of array in c++;but there is a way cause when you delete this heap memry compiler needs to know the size of array but its comprimising
+//there is no way of knowing the size of array in c++;but there is a way cause when you delete this heap memory compiler needs to know the size of array but its comprimising
 
 #include <iostream>
 #include <array>
