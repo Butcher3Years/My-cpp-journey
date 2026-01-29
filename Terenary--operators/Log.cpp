@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-static int s_Level = 6;
+static int s_Level = 102;
 static int s_Speed = 2;
 
 int main()
